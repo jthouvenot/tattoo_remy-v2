@@ -1,0 +1,295 @@
+/**
+* Author: Jimmy Thouvenot
+* Version: 2.3 (19/06/2014)
+**/
+
+/******************** -Page Index- ********************/
+html, body {
+	height: 100%;/*Sticky Footer*/
+}
+
+body {
+	background-color: #000;/*#22262e;*/
+	min-width:320px;
+}
+
+#img-logo{
+	width:150px;
+}
+
+.menu-icon
+{
+  width: auto; /* hack for menu icon bug */
+}
+
+/*TODO Voir si encore utile*/
+#pbOverlay .wrapper {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/*Block du corps de la page*/
+.row-corps{
+	background-color:black;
+	background-image:linear-gradient(#2F3238,black);
+	border-top:1px solid #22262e;/*#0079a1;*/
+	border-bottom:1px solid #000;
+	border-radius:6px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 200px;
+}
+.row-header{
+	margin-top: 2px;
+}
+.row-header, .row-footer{
+    background-color:black;
+	background-image:linear-gradient(black,#2F3238);
+	border-top:1px solid #22262e;
+	border-bottom:1px solid #000;
+	border-radius:6px;
+
+}
+.row-footer{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+footer, .push {
+	height: 1px; /* '.push' must be the same height as 'footer' 100px*/
+	clear:both;
+}
+
+/******************** -Page Accueil- ********************/
+#img-accueil{
+	display: block;
+	position:relative;
+	/*width:75%;*/
+	/*min-width: 300px;*/
+	margin: 0 auto;
+    max-width: 100%;
+    height:auto;
+    width:auto;
+    box-sizing:border-box;
+
+}
+
+/******************** -Page Equipe- ********************/
+.rslides_container {
+  	margin: 10px auto;
+	width:100%;
+	max-width: 800px;
+}
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 20px 0;
+	margin: 0;
+}
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+.rslides img {
+	display: block;
+	height: auto;
+	width: 100%;
+	border: 1px solid #2F3238;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.centered-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 50%;
+	left: 0;
+	opacity: 0.7;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 61px;
+	width: 38px;
+	background: transparent url("themes.gif") no-repeat left top;
+	margin-top: -45px;
+}
+.centered-btns_nav:active {
+	opacity: 1.0;
+}
+
+.centered-btns_nav.next {
+	left: auto;
+	background-position: right top;
+	right: 0;
+}
+
+.transparent-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 0;
+	left: 0;
+	display: block;
+	background: #fff; /* Fix for IE6-9 */
+	opacity: 0;
+	filter: alpha(opacity=1);
+	width: 48%;
+	text-indent: -9999px;
+	overflow: hidden;
+	height: 91%;
+}
+
+.transparent-btns_nav.next {
+	left: auto;
+	right: 0;
+}
+
+.large-btns_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	opacity: 0.6;
+	text-indent: -9999px;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: #000 url("themes.gif") no-repeat left 50%;
+	width: 38px;
+}
+
+.large-btns_nav:active {
+	opacity: 1.0;
+}
+
+.large-btns_nav.next {
+	left: auto;
+	background-position: right 50%;
+	right: 0;
+}
+
+.centered-btns_nav:focus,
+.transparent-btns_nav:focus,
+.large-btns_nav:focus {
+	outline: none;
+ }
+
+.centered-btns_tabs,
+.transparent-btns_tabs,
+.large-btns_tabs {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.centered-btns_tabs li,
+.transparent-btns_tabs li,
+.large-btns_tabs li {
+	display: inline;
+	float: none;
+	_float: left;
+	*float: left;
+	margin-right: 5px;
+}
+
+.centered-btns_tabs a,
+.transparent-btns_tabs a,
+.large-btns_tabs a {
+	text-indent: -9999px;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #fff;/*#ccc;*/
+	background: rgba(255,255,255, .2);
+	display: inline-block;
+	_display: block;
+	*display: block;
+	-webkit-box-shadow: inset 0 0 2px 0 rgba(255,255,255,.3);
+	-moz-box-shadow: inset 0 0 2px 0 rgba(255,255,255,.3);
+	box-shadow: inset 0 0 2px 0 rgba(255,255,255,.3);
+	width: 9px;
+	height: 9px;
+}
+
+.centered-btns_here a,
+.transparent-btns_here a,
+.large-btns_here a {
+	background: #fff;/*222[jt]*/
+	background: rgba(255,255,255, .8);
+}
+
+/******************** -Page Galeries- ********************/
+.lien-galerie{
+	color:#2ba6cb;
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+/*Suppression du contour sur image map*/
+.imageMap{
+    outline: none;
+}
+
+/******************** -Page Galerie/*- ********************/
+.titre-galerie{
+	color:#0079a1;
+	font-size: 18px;
+	margin: 5px auto 0 auto;
+	width: 50px;
+	font-weight: bold;
+}
+
+/*PhotoSwipe*/
+.ps-active img{
+	border-radius: 20px;
+}
+#Gallery{
+	list-style: none;
+}
+#Gallery li {
+	float: left;
+	width: 25%;
+}
+#Gallery li  a{
+	display: block;
+	margin: 5px;
+	border: 1px solid #2ba6cb;
+  	border-radius: 10px;
+}
+#Gallery li img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#galerie img, .img-gal{
+	border-radius: 10px;
+}
+
+/******************** -Page Magasin- ********************/
+#img-googlemap:hover{
+	zoom:105%;
+}
+#img-facebook:hover{
+	zoom:110%;
+}
+
+/******************** -Page Liens- ********************/
+.liens img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+}
