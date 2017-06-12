@@ -14,22 +14,22 @@
 	<script src="js/vendor/jquery.js"></script>
 </head>
 
-<body> 
+<body>
 
 <?php
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	$listePages = [
 		"accueil",
-		"equipe",
+		// "equipe",
 		"galeries",
-		"galerie-remy",
-		"galerie-ben",
-		"galerie-jeremy",
+		// "galerie-remy",
+		// "galerie-ben",
+		// "galerie-jeremy",
 		"magasin",
 		"liens",
       "piercing"
 	];
-	
+
 	$pageDemande="accueil";
 	if(isset($_GET['p'])){
 		if (in_array($_GET['p'], $listePages)) {$pageDemande=$_GET['p'];}
@@ -52,16 +52,16 @@
    				<!-- Right Nav Section -->
     			<ul class="right">
      				<li><a href="index.php?p=accueil">Accueil</a></li>
-					<li class="divider"></li>
-    				<li><a href="index.php?p=equipe">Equipe</a></li>
-					<li class="divider"></li>
+						<li class="divider"></li>
+    				<!-- <li><a href="index.php?p=equipe">Equipe</a></li>
+						<li class="divider"></li> -->
     				<li><a href="index.php?p=galeries">Galeries</a></li>
-					<li class="divider"></li>
-					<li><a href="index.php?p=magasin">Magasin</a></li>
-					<li class="divider"></li>
-    				<li><a href="index.php?p=piercing">Piercing</a></li>
-					<li class="divider"></li>
- 					<li><a href="index.php?p=liens">Liens</a></li>
+						<li class="divider"></li>
+						<li><a href="index.php?p=magasin">Magasin</a></li>
+						<li class="divider"></li>
+	    			<li><a href="index.php?p=piercing">Piercing</a></li>
+						<li class="divider"></li>
+ 						<li><a href="index.php?p=liens">Liens</a></li>
     			</ul>
 			</section>
 		</nav>
